@@ -1,0 +1,96 @@
+html, body {
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  font-family: Serif, Georgia;
+  background-color: #ac8eca;
+  color: #2b282f;
+  overflow:hidden;
+  text-align: center;
+  font-size: 25px;
+
+}
+
+.container h1 {
+  font-size: 50px;
+  margin-top: 80px;
+  color: #1b1323;
+}
+
+.container h3 {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.container form {
+  margin-left: 100px;
+  text-align: left;
+}
+
+.container input.Email {
+  width: 400px;
+  height: 25px;
+  color: #1b1323;
+  margin-top: 0px;
+  font-family: Serif, Georgia;
+  font-size: 18px;
+  padding: 10px;
+  background-color:#f8f2ff;
+  transition: all 0.5s ease-in-out;
+
+}
+
+.container input.Shoe {
+  width: 180px;
+  height: 25px;
+  color: #1b1323;
+  font-family: Serif, Georgia;
+  font-size: 16px;
+  margin-top: 15px;
+  padding: 10px;
+  background-color:#f8f2ff;
+  transition: all 0.5s ease-in-out;
+
+}
+
+.container select {
+  width: 50px;
+  height: 40px;
+  font-family: Serif, Georgia;
+  font-size: 18px;
+  color: #1b1323;
+  background-color:#f8f2ff
+}
+
+.container button {
+  width: 100px;
+  height: 40px;
+  font-family: Serif, Georgia;
+  font-weight: bolder;
+  font-size: 16px;
+  color: #1b1323;
+  background-color:#f8f2ff
+}
+
+.container p {
+  margin-top: 250px;
+}
+
+.message {
+    font-size: 20px;
+    color: #C71E00;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid red;
+    margin-left: 50px;
+    margin-right: 50px;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.message:empty {
+  border: none;
+}

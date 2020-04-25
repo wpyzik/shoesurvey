@@ -1,0 +1,24 @@
+<!--<div class= "container">!-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <title> Data Collector App </title>
+  <head>
+      <link href="../static/main.css" rel="stylesheet">
+   <body>
+     <div class= "container">
+        <h1> Collecting Shoe Size </h1>
+        <h3> Please fill below entries to learn what is the most common shoe size </h3>
+        <div class="message">{{text | safe}}</div>
+        <form action="{{url_for("success")}}" method="POST">
+          <input class= "Email" title="Your email will be safe with us" placeholder="Enter your email adress" type="email" name="email_name" required> <br>
+          <input class= "Shoe" title="Your data will be safe with us" placeholder="Enter your shoe size in cm or ft" type="number" min="0", max="42" step="0.01" name="shoe_name" required>
+             <select id = "cm/ft">
+               <option value = "cm">cm</option>
+               <option value = "ft">ft</option>
+             </select>
+          <button type="Submit"> Submit </button>
+        </form>
+     </div>
+   </body>
+</html>
