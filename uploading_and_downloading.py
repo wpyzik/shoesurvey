@@ -26,18 +26,13 @@ def index():
 def success():
     global file
     if request.method=='POST':
-        Email=request.form["email_name"]
-        Shoe=request.form["shoe_name"]
-        if db.session.query(Data).filter(Data.email==Email).count() == 0:
-            data=Data(Email,Shoe)
-            db.session.add(data)
-            db.session.commit()
-            average_shoe=db.session.query(func.avg(Data.shoe)).scalar()
-            average_shoe=round(average_shoe,2)
-            count=db.session.query(Data.shoe).count()
-            send_email(Email,Shoe,average_shoe,count)
-            return render_template("success.html")
-        return render_template("index.html", text="It looks like we already have data from this email address")
+        file=request.files["file"]
+        #content=file.read()
+        file.save(secure_filename("Uploaded"+file.filename))
+        with open("Uploaded"+file.filename,"a") as f:
+            f.write("It was added later")
+            return render_template("index.html", btn="download.html")
+    return render_template("index.html", text="It looks like we already have data from this email address")
 
 
 @app.route("/download")
